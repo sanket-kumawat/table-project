@@ -3,13 +3,13 @@
 Instructions and Screenshots which are replicated in angular.
 
 - A table with a list of elements, "details" button should be clickable
-![](src\assets\screenshots\a.png)
+![](./src/assets/screenshots/a.png)
 
 - When clicked on the Details button, on the right side details of that item should be displayed
-![](src\assets\screenshots\b.png)
+![](./src/assets/screenshots/b.png)
 
 - The list should be searchable. 
-![](src\assets\screenshots\c.png)
+![](./src/assets/screenshots/c.png)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
