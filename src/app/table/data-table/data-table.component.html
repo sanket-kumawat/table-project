@@ -1,0 +1,39 @@
+<section class="main-section">
+  <div class="table-container">
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th class="date-column">Date</th>
+            <th class="list-name-column">List Name</th>
+            <th class="entities-column">No. of Entities</th>
+            <th class="actions-column">Actions</th>
+            <th class="details-column"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of listData; let index = index" [ngClass]="{'selected-row': index === activeIndex}">
+            <td class="date-column" *ngIf="item.date !== ''; else noDate">{{ item.date }}</td>
+            <ng-template #noDate>
+              <td class="date-column">
+                <img src="../../../assets/icon/circle.svg" alt="">
+              </td>
+            </ng-template>
+            <td class="list-name-column" [ngClass]="{'blue-color': item.date === ''}">{{ item.name }}</td>
+            <td class="entities-column">{{ item.details.length }}</td>
+            <td class="actions-column">
+              <img src="../../../assets/icon/mail (1).svg" alt="">
+              <ng-container *ngIf="item.date !== ''">
+                <img src="../../../assets/icon/share-2.svg" alt="">
+                <img src="../../../assets/icon/edit-2.svg" alt="">
+                <img src="../../../assets/icon/trash-2.svg" alt="">
+              </ng-container>
+            </td>
+            <td class="details-column"><button (click)="goToDetails(item.details, index)">Details</button></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <div style="flex-grow: 1;">
+    <app-detail [detail]="details"></app-detail>
+  </div>
+</section>

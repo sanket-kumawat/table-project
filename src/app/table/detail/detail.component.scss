@@ -1,0 +1,39 @@
+@import "../../../styles.scss";
+
+.detail-overview {
+  height: 100%;
+  border-left: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  .description {
+    background-color: $main-bg-color;
+    padding: 14px;
+    margin: 14px;
+    p {
+      display: inline;
+    }
+    span {
+      margin-left: 5px;
+      color: #007499;
+      font-weight: 500;
+    }
+  }
+  .detail-list {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 0 14px 14px 14px;
+    ul {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      list-style-type: none;
+      padding: unset;
+      li {
+        padding-bottom: 10px;
+        color: #1F7DAD;
+      }
+    }
+  }
+}

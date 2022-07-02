@@ -1,0 +1,24 @@
+<!-- <mat-toolbar class="navBar">
+  <div>
+    <button mat-button class="myIcon">
+      <mat-icon style="color: teal" [inline]="true">list</mat-icon>Basic
+    </button>
+  </div>
+
+  <div style="font-size: 10px">
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Search" />
+    </mat-form-field>
+  </div>
+</mat-toolbar> -->
+
+<nav class="navBar">
+  <div>
+    <button class="nav-button active"><img src="../../../assets/icon/list.svg" alt=""> SAVED LISTS</button>
+    <button class="nav-button"><img src="../../../assets/icon/filter.svg" alt=""> SAVED FILTERS</button>
+    <button class="nav-button"><img src="../../../assets/icon/history_black_24dp.svg" alt=""> SEARCH HISTORY</button>
+  </div>
+  <div>
+    <input class="nav-input" type="text" [formControl]="searchControl" (input)="onInput()" placeholder="Search">
+  </div>
+</nav>
