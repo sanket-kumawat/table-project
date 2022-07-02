@@ -1,5 +1,7 @@
 # TableDesign
 
+This project is hosted on [Firebase](https://table-design-project.web.app/).
+
 Instructions and Screenshots which are replicated in angular.
 
 - A table with a list of elements, "details" button should be clickable
